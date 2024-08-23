@@ -116,7 +116,7 @@ pchsource "src/std_include.cpp"
 
 files {"./src/**.rc", "./src/**.hpp", "./src/**.cpp"}
 
-includedirs {"./src", "%{prj.location}/src"}
+includedirs {"./src", "%{prj.location}/src", "./deps/nlohmann", "%{prj.location}/deps/nlohmann"}
 
 filter "system:windows"
 	files {

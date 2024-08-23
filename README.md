@@ -2,7 +2,7 @@
 
 
 # AlterWare: Master Server
-This is the master server our clients use. It is based on the DP Master Server (ID Tech) protocol
+This is a modified version the master server AlterWare clients use. It is based on the DP Master Server (ID Tech) protocol
 
 ## Build
 - Clone this repository using [Git][git-link]
@@ -13,6 +13,15 @@ This is the master server our clients use. It is based on the DP Master Server (
     - Windows: `.\scripts\windows\build.bat` (note: Visual Studio is required)
         - This script may not work. If it doesn't, please use the Visual Studio IDE to build
     - Linux: `./scripts/linux/build.sh`
+
+## Setup
+You can optionally configure the title and stats path by adding a config.json file at the same level as your compiled executable. The file should look like this:
+```json
+{
+    "title": "AlterWare Master",
+    "stats_path": "/var/www/server.alterware.dev/html/stats.json"
+}
+```
 
 **IMPORTANT**
 Requirements for Unix systems:

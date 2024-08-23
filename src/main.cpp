@@ -4,6 +4,8 @@
 #include "server.hpp"
 #include "crypto_key.hpp"
 
+#include <utils/config.hpp>
+
 namespace
 {
 	void unsafe_main(const uint16_t port)
@@ -30,8 +32,10 @@ namespace
 
 int main(const int argc, const char** argv)
 {
-	console::set_title("AlterWare Master");
-	console::log("AlterWare Master");
+    utils::config& config = utils::config::instance();
+
+	console::set_title(config.get_title());
+	console::log(config.get_title().c_str());
 
 	try
 	{
