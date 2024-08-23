@@ -12,10 +12,10 @@ docker run -p 20810:20810/udp alterware/master-server:latest
 ```
 
 ## Build
-- Install [Premake5][premake5-link] and add it to your system PATH
 - Clone this repository using [Git][git-link]
-- Update the submodules using ``git submodule update --init --recursive``
-- Run Premake with either of these two options ``premake5 vs2022`` (Windows) or ``premake5 gmake2`` (Linux/macOS)
+- Run the appropriate setup script based on your operating system:
+    - Windows: `.\scripts\windows\setup.bat`
+    - Linux: `./scripts/linux/setup.sh`
 
 **IMPORTANT**
 Requirements for Unix systems:
