@@ -63,6 +63,7 @@ void getservers_command::handle_command(const network::address& target, const st
 		});
 
 	size_t packet_count = 0;
+    size_t server_count = prepared_servers.size();
 	std::string response{};
 
 	while (!prepared_servers.empty())
@@ -93,5 +94,5 @@ void getservers_command::handle_command(const network::address& target, const st
 		}
 	}
 
-	console::log("Sent %zu servers in %zu parts for game %s:\t%s", prepared_servers.size(), packet_count, game.data(), target.to_string().data());
+	console::log("Sent %zu servers in %zu parts for game %s:\t%s", server_count, packet_count, game.data(), target.to_string().data());
 }
