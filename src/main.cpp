@@ -36,6 +36,7 @@ int main(const int argc, const char** argv)
 
 	console::set_title(config.get_title());
 	console::log(config.get_title().c_str());
+    console::log("Stats will be saved to %s", config.get_stats_path().c_str());
 
 	try
 	{
