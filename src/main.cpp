@@ -40,7 +40,7 @@ int main(const int argc, const char** argv)
 
 	try
 	{
-		unsafe_main(argc > 1 ? static_cast<uint16_t>(std::strtol(argv[1], nullptr, 10)) : 20810);
+		unsafe_main(argc > 1 ? static_cast<uint16_t>(std::strtol(argv[1], nullptr, 10)) : config.get_port());
 	}
 	catch (std::exception& e)
 	{

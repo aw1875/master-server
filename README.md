@@ -1,8 +1,8 @@
 [![build](https://github.com/alterware/master-server/workflows/Build/badge.svg)](https://github.com/alterware/master-server/actions)
 
 
-# AlterWare: Master Server
-This is a modified version the master server AlterWare clients use. It is based on the DP Master Server (ID Tech) protocol
+# AlterWare: Master Server (H2M)
+This is a modified version the master server AlterWare clients use to add H2M support. It is based on the DP Master Server (ID Tech) protocol
 
 ## Build
 - Clone this repository using [Git][git-link]
@@ -15,11 +15,12 @@ This is a modified version the master server AlterWare clients use. It is based 
     - Linux: `./scripts/linux/build.sh`
 
 ## Setup
-You can optionally configure the title and stats path by adding a config.json file at the same level as your compiled executable. The file should look like this:
+You can optionally configure the title, stats path, and port by adding a config.json file at the same level as your compiled executable. The file should look like this:
 ```json
 {
     "title": "AlterWare Master",
-    "stats_path": "/var/www/server.alterware.dev/html/stats.json"
+    "stats_path": "/var/www/server.alterware.dev/html/stats.json",
+    "port": 20810
 }
 ```
 

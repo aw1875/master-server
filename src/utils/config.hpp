@@ -22,6 +22,7 @@ namespace utils
 
             std::string get_title() const { return this->title; }
             std::string get_stats_path() const { return this->stats_path; }
+            uint16_t get_port() const { return this->port; }
 
         private:
             config() { this->parse_config(); }
@@ -42,9 +43,11 @@ namespace utils
 
                 if (config.contains("title")) config.at("title").get_to(this->title);
                 if (config.contains("stats_path")) config.at("stats_path").get_to(this->stats_path);
+                if (config.contains("port")) config.at("port").get_to(this->port);
             }
 
             std::string title = "AlterWare Master";
             std::string stats_path = "/var/www/server.alterware.dev/html/stats.json";
+            uint16_t port = 20810;
     };
 }
