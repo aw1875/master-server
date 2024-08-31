@@ -2,6 +2,7 @@
 #include "statistics_handler.hpp"
 #include "../console.hpp"
 
+#include <utils/env.hpp>
 #include <utils/io.hpp>
 #include <utils/string.hpp>
 #include <utils/config.hpp>
@@ -74,12 +75,12 @@ void statistics_handler::run_frame()
 
 	for (const auto& game_servers : servers)
 	{
-		console::log("%s (%d):", resolve_game_type_name(game_servers.first).data(),
+		console::log("%s (%d):", resolve_game_type_name(game_servers.first).c_str(),
 		             static_cast<uint32_t>(game_servers.second.size()));
 
 		for (const auto& server : game_servers.second)
 		{
-			console::log("\t%s\t%s", server.second.to_string().data(), server.first.data());
+			console::log("\t%s\t%s", server.second.to_string().c_str(), server.first.c_str());
 		}
 	}
 
